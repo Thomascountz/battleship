@@ -4,4 +4,5 @@ plugins:
     enable: true
 exclude_patters:
   - "spec/"
+  - "Gemfile"
   - "**.md"
