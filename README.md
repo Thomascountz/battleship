@@ -1,4 +1,4 @@
-# Battleship
+# Battleship [![Build Status](https://travis-ci.org/Thomascountz/cli_battleship.svg?branch=master)](https://travis-ci.org/Thomascountz/cli_battleship) [![Maintainability](https://api.codeclimate.com/v1/badges/3fb425fd9d66161a4e0f/maintainability)](https://codeclimate.com/github/Thomascountz/cli_battleship/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/3fb425fd9d66161a4e0f/test_coverage)](https://codeclimate.com/github/Thomascountz/cli_battleship/test_coverage)
 This is a command-line implementation of the game, Battleship, written in Ruby.
 
 To get started, follow the instructions below. Once the game begins, you can follow the game's instructions to play a game!
