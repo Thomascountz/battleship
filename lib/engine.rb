@@ -1,4 +1,4 @@
-require_relative 'console_ui'
+require_relative "console_ui"
 
 class Engine
   def initialize(interface: ConsoleUI.new)
