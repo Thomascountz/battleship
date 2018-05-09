@@ -25,6 +25,14 @@ RSpec.describe ConsoleUI do
     end
   end
 
+  describe '#prompt' do
+    it 'gives the user direction to input a coordinate' do
+      console_ui.prompt
+
+      expect(output.string).to include("Please", "coordinate")
+    end
+  end
+
   describe '#get_coordinate' do
     it 'gets a coordiante from input' do
       input = StringIO.new("32\n")

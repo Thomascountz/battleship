@@ -13,6 +13,7 @@ class ConsoleUI
   end
 
   def prompt
+    output.puts "Please enter a coordinate."
   end
 
   def get_coordinate
