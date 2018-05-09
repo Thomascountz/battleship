@@ -13,6 +13,8 @@ RSpec.describe Engine do
     it 'starts the game' do
       expect(console_ui).to receive(:greet)
       expect(console_ui).to receive(:display_board).with(board)
+      expect(console_ui).to receive(:prompt)
+      expect(console_ui).to receive(:get_coordinate)
 
       engine.start
     end

@@ -10,6 +10,8 @@ class Engine
   def start
     interface.greet
     interface.display_board(board)
+    interface.prompt
+    interface.get_coordinate
   end
 
   private

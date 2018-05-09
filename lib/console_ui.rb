@@ -12,6 +12,9 @@ class ConsoleUI
      output.puts format_board(board)
   end
 
+  def prompt
+  end
+
   def get_coordinate
     input.gets.chomp
   end
