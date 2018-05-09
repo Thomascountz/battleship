@@ -3,7 +3,7 @@ class Board
 
   def initialize
     @play_area = []
-    10.times do 
+    10.times do
       row = []
       10.times do
         row << nil
