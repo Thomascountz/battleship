@@ -24,4 +24,12 @@ RSpec.describe ConsoleUI do
       expect(output.string).to eq expected
     end
   end
+
+  describe '#get_coordinate' do
+    it 'gets a coordiante from input' do
+      input = StringIO.new("32\n")
+      console_ui = ConsoleUI.new(input: input)
+      expect(console_ui.get_coordinate).to eq('32')
+    end
+  end
 end
