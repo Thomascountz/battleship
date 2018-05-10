@@ -8,7 +8,9 @@ class Cell
   end
 
   def strike
-    @hit = true
+    if !hit?
+      @hit = true
+    end
   end
 
   def to_s

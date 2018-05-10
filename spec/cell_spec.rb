@@ -14,10 +14,19 @@ RSpec.describe Cell do
   end
 
   describe '#stike' do
-    it 'sets hit? to true' do
-      cell = Cell.new
-      cell.strike
-      expect(cell.hit?).to be true
+    context 'when a cell is not hit' do
+      it 'sets hit? to true' do
+        cell = Cell.new
+        cell.strike
+        expect(cell.hit?).to be true
+      end
+    end
+    context 'when a cell has already been hit' do
+      it 'returns nil' do
+        cell = Cell.new
+        cell.strike
+        expect(cell.strike).to be nil
+      end
     end
   end
 
