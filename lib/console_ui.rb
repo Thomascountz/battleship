@@ -13,7 +13,7 @@ class ConsoleUI
   end
 
   def prompt
-    output.puts "Enter an enemy position."
+    output.puts "Enter an enemy position.\nFormat: <ROW><COLUMN>\nExample: 29"
   end
 
   def get_position
