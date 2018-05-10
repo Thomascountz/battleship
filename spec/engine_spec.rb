@@ -14,7 +14,7 @@ RSpec.describe Engine do
       expect(console_ui).to receive(:greet)
       expect(console_ui).to receive(:display_board).with(board)
       expect(console_ui).to receive(:prompt)
-      expect(console_ui).to receive(:get_coordinate)
+      expect(console_ui).to receive(:get_position)
 
       engine.start
     end

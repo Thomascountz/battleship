@@ -11,7 +11,7 @@ class Engine
     interface.greet
     interface.display_board(board)
     interface.prompt
-    interface.get_coordinate
+    interface.get_position
   end
 
   private

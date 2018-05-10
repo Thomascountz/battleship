@@ -13,10 +13,10 @@ class ConsoleUI
   end
 
   def prompt
-    output.puts "Please enter a coordinate."
+    output.puts "Enter an enemy position."
   end
 
-  def get_coordinate
+  def get_position
     input.gets.chomp
   end
 
