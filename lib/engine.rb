@@ -9,9 +9,14 @@ class Engine
 
   def start
     interface.greet
-    interface.display_board(board)
-    interface.prompt
-    interface.get_position
+    until board.game_over?
+      interface.display_board(board)
+      interface.prompt
+      position = interface.get_position
+      until board.strike_position(position)
+        position = interface.get_position
+      end
+    end
   end
 
   private

@@ -26,4 +26,9 @@ class Board
     return nil if index < 0
     play_area.flatten[index]
   end
+
+  def game_over?
+    # TODO
+    false
+  end
 end

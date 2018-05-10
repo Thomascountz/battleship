@@ -60,4 +60,10 @@ RSpec.describe Board do
       end
     end
   end
+
+  describe '#game_over?' do
+    it 'returns true when all ships are sunk' do
+      expect(board.game_over?).to be false
+    end
+  end
 end

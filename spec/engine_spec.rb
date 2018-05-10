@@ -11,10 +11,15 @@ RSpec.describe Engine do
 
   describe '#start' do
     it 'starts the game' do
+      position = "stub"
+
       expect(console_ui).to receive(:greet)
+      expect(board).to receive(:game_over?).and_return(false)
       expect(console_ui).to receive(:display_board).with(board)
       expect(console_ui).to receive(:prompt)
-      expect(console_ui).to receive(:get_position)
+      expect(console_ui).to receive(:get_position).and_return(position)
+      expect(board).to receive(:strike_position).with(position).and_return(true)
+      expect(board).to receive(:game_over?).and_return(true)
 
       engine.start
     end
