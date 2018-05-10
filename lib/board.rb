@@ -1,3 +1,5 @@
+require_relative 'cell'
+
 class Board
   attr_reader :play_area
 

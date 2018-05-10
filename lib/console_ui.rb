@@ -34,8 +34,8 @@ class ConsoleUI
       board_string << pipe
       board_string << "  #{row_number}  "
       board_string << pipe
-      row.each do |_cell|
-        board_string << "  .  "
+      row.each do |cell|
+        board_string << "  #{cell}  "
         board_string << pipe
       end
       board_string << newline
