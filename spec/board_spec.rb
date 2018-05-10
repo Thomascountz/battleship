@@ -21,4 +21,26 @@ RSpec.describe Board do
       end
     end
   end
+
+  describe '#cell_at' do
+    context 'when a cell exists at index' do
+      it 'returns the cell at a given index in the play_area' do
+        index = 13
+        cell = board.play_area[1][3]
+        expect(board.cell_at(index)).to be cell
+      end
+    end
+    context 'when a cell does not exist at index' do
+      it 'returns nil' do
+        index = 100
+        expect(board.cell_at(index)).to be nil
+      end
+    end
+    context 'when index is a negative number' do
+      it 'returns nil' do
+        index = -1
+        expect(board.cell_at(index)).to be nil
+      end
+    end
+  end
 end

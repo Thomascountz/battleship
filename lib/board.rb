@@ -1,4 +1,4 @@
-require_relative 'cell'
+require_relative "cell"
 
 class Board
   attr_reader :play_area
@@ -12,5 +12,10 @@ class Board
       end
       @play_area << row
     end
+  end
+
+  def cell_at(index)
+    return nil if index < 0
+    play_area.flatten[index]
   end
 end
