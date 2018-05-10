@@ -15,7 +15,9 @@ class Board
   end
 
   def strike_position(position)
-    if cell_at(position).strike
+    cell = cell_at(position)
+    if cell && !cell.hit?
+      cell.strike
       true
     else
       false

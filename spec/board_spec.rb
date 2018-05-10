@@ -37,6 +37,12 @@ RSpec.describe Board do
         expect(board.strike_position(position)).to be false
       end
     end
+    context 'if the position is invalid' do
+      it 'returns false' do
+        position = 100
+        expect(board.strike_position(position)).to be false
+      end
+    end
   end
 
   describe '#cell_at' do
