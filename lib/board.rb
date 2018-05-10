@@ -6,7 +6,7 @@ class Board
     10.times do
       row = []
       10.times do
-        row << nil
+        row << Cell.new
       end
       @play_area << row
     end
