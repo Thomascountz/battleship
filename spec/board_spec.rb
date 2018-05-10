@@ -22,6 +22,23 @@ RSpec.describe Board do
     end
   end
 
+  describe '#strike_position' do
+    context 'when the position has not yet been struck' do
+      it 'sets the cell at that position as hit' do
+        position = 21
+        board.strike_position(position)
+        expect(board.cell_at(position)).to be_hit
+      end
+    end
+    context 'if the position has already been struck' do
+      it 'returns false' do
+        position = 21
+        board.cell_at(position).strike
+        expect(board.strike_position(position)).to be false
+      end
+    end
+  end
+
   describe '#cell_at' do
     context 'when a cell exists at index' do
       it 'returns the cell at a given index in the play_area' do

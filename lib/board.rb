@@ -14,6 +14,14 @@ class Board
     end
   end
 
+  def strike_position(position)
+    if cell_at(position).strike
+      true
+    else
+      false
+    end
+  end
+
   def cell_at(index)
     return nil if index < 0
     play_area.flatten[index]
