@@ -17,7 +17,7 @@ class ConsoleUI
   end
 
   def get_position
-    input.gets.chomp
+    input.gets.chomp.to_i
   end
 
   private
