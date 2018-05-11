@@ -36,8 +36,12 @@ class ConsoleUI
       board_string << pipe
       board_string << "  #{row_number}  "
       board_string << pipe
-      row.each do |_cell|
-        board_string << "  .  "
+      row.each do |cell|
+        if cell
+          board_string << "  #{cell}  "
+        else
+          board_string << "  .  "
+        end
         board_string << pipe
       end
       board_string << newline
