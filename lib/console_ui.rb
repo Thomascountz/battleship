@@ -22,6 +22,10 @@ class ConsoleUI
     input.gets.chomp
   end
 
+  def display_status_report(status_report)
+    output.puts status_report
+  end
+
   private
 
   attr_reader :output, :input

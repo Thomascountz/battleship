@@ -49,4 +49,14 @@ RSpec.describe ConsoleUI do
       expect(result).to eq('3')
     end
   end
+
+  describe '#display_status_report' do
+    it 'displays the given status report to the output' do
+      status_report = "STATUS REPORT"
+     
+      console_ui.display_status_report(status_report)
+      
+      expect(output.string).to include(status_report)
+    end
+  end
 end
