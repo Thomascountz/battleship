@@ -11,8 +11,13 @@ RSpec.describe Engine do
 
   describe '#start' do
     it 'starts the game' do
+      row = "row"
+      column = "column"
+
       expect(console_ui).to receive(:greet)
       expect(console_ui).to receive(:display_board).with(board)
+      expect(console_ui).to receive(:get_row).and_return(row)
+      expect(console_ui).to receive(:get_column).and_return(column)
 
       engine.start
     end

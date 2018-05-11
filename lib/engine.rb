@@ -11,6 +11,8 @@ class Engine
   def start
     interface.greet
     interface.display_board(board)
+    row = interface.get_row
+    column = interface.get_column
   end
 
   private

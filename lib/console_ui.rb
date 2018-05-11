@@ -1,6 +1,7 @@
 class ConsoleUI
-  def initialize(output: $stdout)
+  def initialize(output: $stdout, input: $stdin)
     @output = output
+    @input = input
   end
 
   def greet
@@ -11,9 +12,19 @@ class ConsoleUI
     output.puts format_board(board)
   end
 
+  def get_row
+    output.puts "Target row:"
+    input.gets.chomp
+  end
+
+  def get_column
+    output.puts "Target column:"
+    input.gets.chomp
+  end
+
   private
 
-  attr_reader :output
+  attr_reader :output, :input
 
   def format_board(board)
     board_string = horizontal_line
