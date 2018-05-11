@@ -14,6 +14,7 @@ class Engine
     row = interface.get_row
     column = interface.get_column
     board.strike_position(row: row, column: column)
+    interface.display_board(board)
   end
 
   private

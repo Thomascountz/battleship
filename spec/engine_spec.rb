@@ -19,6 +19,7 @@ RSpec.describe Engine do
       expect(console_ui).to receive(:get_row).and_return(row)
       expect(console_ui).to receive(:get_column).and_return(column)
       expect(board).to receive(:strike_position).with(row: row, column: column).and_return(true)
+      expect(console_ui).to receive(:display_board).with(board)
 
       engine.start
     end
